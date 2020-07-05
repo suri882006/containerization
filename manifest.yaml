@@ -1,0 +1,9 @@
+---
+applications:
+
+- name: tracker
+  memory: 1024M
+  timeout: 300
+  random-route: false
+  path: target/eeapp-0.1.war
+  host: eeapp

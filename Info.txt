@@ -1,0 +1,33 @@
+-- Lising docker images
+> docker images
+
+-- Pulling tomcat 8 docker image
+> docker pull tomcat
+
+-- Running a tomcat docker images
+> docker run -p 8080:8080 latest
+
+-- Listing docker containers
+> docker container ls
+
+-- Starting a docker tomcat container
+> docker container start <container Id>
+
+-- Getting inside VM bash - This will list tomcat folder to come out of this bash ^q
+> docker container exec -it <container Id> bash
+
+--Building docker image for war
+> docker image build . --tag eeapp
+
+-- Publishing a war to already running docker image
+> docker container run -it --publish 8083:8084 eeapp
+
+http://localhost:8080/eeapp-0.1/DBServlet
+
+==================
+
+Pushing same to SAP CF Trial with manifest, runtime will be picked default 
+> cf login -a https://api.cf.eu10.hana.ondemand.com
+
+
+
